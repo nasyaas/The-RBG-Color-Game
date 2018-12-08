@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The Color Game</title>
+    <link rel="stylesheet" type="text/css" href="menu.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Prompt:400,600,700"
+      rel="stylesheet"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  
+ <body>
+    <h1>
+      The <br />
+      RBG <br />
+      Color <br> 
+      Game
+    </h1>
+
+    <div id="buttons">
+
+      <input class="button1 btnGen" type="button" onclick="location.href='../game/colorgame.html';" value="Let's Play" />
+      <button id="modalBtn" class="button2 btnGen">Directions</button>
+      <div class="modal">
+        <div class="modal-content">
+            <div class="model-header">
+          <span class="closeBtn">&times;</span>
+          <h2>How to Play</h2>
+        </div>
+        <div class="modal-body">
+          <p>RBG = Red, Blue, and Green</p>
+          <p>Colors contain different amounts of red, blue, and green from 0 to 255. </p>
+            <p>For example:
+            <br>Pure red: (255, 0, 0)
+            <br>Pure blue: (0, 255, 0)
+            <br> Pure green: (0, 0, 255)</p>
+          <p>You will be given a RBG number and you will will have to try to guess the correct color from a series of colored circles. You can start on easy mode (three color options) or jump right into hard (six color options). </p>
+          <p>Good luck!</p>
+        </div>
+        </div>
+      </div>
+
+    <script type="text/javascript" src="menu.js"></script>
+  </body>
+</html>
