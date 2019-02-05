@@ -1,6 +1,6 @@
-var numSquares = 6;
-var colors = generateRandomColors(numSquares);
-var squares = $(".square");
+var numCircles = 6;
+var colors = generateRandomColors(numCircles);
+var circles = $(".circle");
 var pickedColor = colorPicked();
 var colorDisplay = $("#colorDisplay")[0];
 var messageDisplay = $("#message")[0];
@@ -13,15 +13,15 @@ var h2 = $("h2")[0];
 easyBtn.addEventListener("click", function() {
   easyBtn.classList.add("selected");
   hardBtn.classList.remove("selected");
-  numSquares = 3;
-  colors = generateRandomColors(numSquares);
+  numCircles = 3;
+  colors = generateRandomColors(numCircles);
   pickedColor = colorPicked();
   colorDisplay.textContent = pickedColor;
-  for (var i = 0; i < squares.length; i++) {
+  for (var i = 0; i < circles.length; i++) {
     if (colors[i]) {
-      squares[i].style.backgroundColor = colors[i];
+      circles[i].style.backgroundColor = colors[i];
     } else {
-      squares[i].style.display = "none";
+      circles[i].style.display = "none";
     }
   }
 });
@@ -29,26 +29,26 @@ easyBtn.addEventListener("click", function() {
 hardBtn.addEventListener("click", function() {
   hardBtn.classList.add("selected");
   easyBtn.classList.remove("selected");
-  numSquares = 6;
-  colors = generateRandomColors(numSquares);
+  numCircles = 6;
+  colors = generateRandomColors(numCircles);
   pickedColor = colorPicked();
   colorDisplay.textContent = pickedColor;
-  for (var i = 0; i < squares.length; i++) {
-    squares[i].style.backgroundColor = colors[i];
-    squares[i].style.display = "block";
+  for (var i = 0; i < circles.length; i++) {
+    circles[i].style.backgroundColor = colors[i];
+    circles[i].style.display = "block";
   }
 });
 
 resetButton.addEventListener("click", function() {
   //generate all new colors
-  colors = generateRandomColors(numSquares);
+  colors = generateRandomColors(numCircles);
   //pick a new random color from array
   pickedColor = colorPicked();
   //change colorDisplay to mach pickedColor
   colorDisplay.textContent = pickedColor;
-  //change colors of squares
-  for (var i = 0; i < squares.length; i++) {
-    squares[i].style.backgroundColor = colors[i];
+  //change colors of circles
+  for (var i = 0; i < circles.length; i++) {
+    circles[i].style.backgroundColor = colors[i];
   }
   h1.style.backgroundColor = "#fddddb";
   h2.style.backgroundColor = "#fddddb";
@@ -56,13 +56,13 @@ resetButton.addEventListener("click", function() {
 
 colorDisplay.textContent = pickedColor;
 
-for (var i = 0; i < squares.length; i++) {
-  //add initial colors to squares
-  squares[i].style.backgroundColor = colors[i];
+for (var i = 0; i < circles.length; i++) {
+  //add initial colors to circles
+  circles[i].style.backgroundColor = colors[i];
 
-  //add click listeners to squares
-  squares[i].addEventListener("click", function() {
-    //grab color of clikced square
+  //add click listeners to circles
+  circles[i].addEventListener("click", function() {
+    //grab color of clicked circle
     var clickedColor = this.style.backgroundColor;
     //compare color to pickedColor
     if (clickedColor === pickedColor) {
@@ -79,10 +79,10 @@ for (var i = 0; i < squares.length; i++) {
 }
 
 function changeColors(color) {
-  //loop through all squares
-  for (var i = 0; i < squares.length; i++) {
+  //loop through all circles
+  for (var i = 0; i < circles.length; i++) {
     //change each color to match given color
-    squares[i].style.backgroundColor = color;
+    circles[i].style.backgroundColor = color;
   }
 }
 
